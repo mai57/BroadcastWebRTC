@@ -1,11 +1,17 @@
+sudo: required
+dist: trusty
+group: deprecated-2017Q4
 language: node_js
 node_js:
-  - "0.11"
+  - "8.11.1"
 install: npm install
 before_script:
-  - npm install grunt-cli@0.1.13 -g
-  - npm install grunt@0.4.5
-  - grunt
+  - npm install socket.io
+script:
+  - node server.js
 after_failure: npm install && grunt
-matrix:
-  fast_finish: true
+after_success:
+  - firebase deploy --token $FIREBASE_TOKEN
+ 
+
+
