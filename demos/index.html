@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Firebase google</title>
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!--bootstrap-->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+</head>
+
+<body>
+    <div id="login_div" class="main-div">
+        <button type="button" name="button" onclick="googleSignIn()"> Google SignIn</button>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyDuxGEOhCkc-SdHrZ3JC4-ne7hd_EPV4so",
+            authDomain: "projectbroadcast-179911.firebaseapp.com",
+            databaseURL: "https://projectbroadcast-179911.firebaseio.com",
+            projectId: "projectbroadcast-179911",
+            storageBucket: "projectbroadcast-179911.appspot.com",
+            messagingSenderId: "759061070279"
+        };
+        firebase.initializeApp(config);
+
+    </script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
