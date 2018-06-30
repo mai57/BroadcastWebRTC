@@ -10,7 +10,6 @@ before_script:
   - npm install grunt-cli@0.1.13 -g
   - npm install grunt@0.4.5
   - grunt
-before_script:
   - npm install -g firebase-tools
 script:
   - npm test
