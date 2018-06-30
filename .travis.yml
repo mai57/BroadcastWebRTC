@@ -7,9 +7,12 @@ node_js:
 install: npm install
 before_script:
   - npm install socket.io
-script:
-  - npm run build
+  - npm install grunt-cli@0.1.13 -g
+  - npm install grunt@0.4.5
+  - grunt
 after_failure: npm install && grunt
+matrix:
+  fast_finish: true
 after_success:
   - firebase deploy --token $FIREBASE_TOKEN
  
